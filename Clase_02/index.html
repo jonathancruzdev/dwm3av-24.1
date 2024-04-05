@@ -16,7 +16,7 @@
     </header>
 
     <main id="contenedorApp" class="container mt-2">
-        <h2> {{ titulo }} </h2>
+        <h2 v-bind:class="{ active: activo }"> {{ titulo }} </h2>
         <img 
             v-bind:src="foto"  
             v-bind:alt="mascota"

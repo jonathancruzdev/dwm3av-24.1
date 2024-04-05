@@ -5,6 +5,12 @@ header {
     justify-content: center;
 }
 
+.active {
+    font-weight: 600;
+    text-decoration: underline;
+    color: slateblue;
+}
+
 main {
     min-height: 70vh;
 }

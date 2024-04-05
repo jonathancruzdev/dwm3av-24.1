@@ -7,7 +7,8 @@ const app = Vue.createApp({
             mensaje: 'Bienvenido a VueJS',
             foto: 'images/gatito.png',
             mascota: 'Gatito',
-            logueado: true
+            logueado: true,
+            activo: true
         }
     }
 });
