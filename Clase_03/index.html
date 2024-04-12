@@ -17,28 +17,44 @@
         <h1 class="text-white">Clase 03 - Directivas</h1>
     </header>
 
-    <main id="container" class="container mt-2">
+    <main id="app" class="container mt-2">
         <div class="row mt-3">
             <div class="col-md-4">
-                <form class="card p-3">
+                <form v-on:submit.prevent="guardar" class="card p-3">
                     <label for="tarea">Tarea</label>
-                    <textarea cols="30" rows="4" class="form-control"></textarea>
+                    <textarea v-model="tarea" cols="30" rows="4" class="form-control"></textarea>
                     <button class="btn btn-success mt-2" type="submit">Guardar</button>
                 </form>
             </div>
             <div class="col-md-4">
                 <div class="card p-2">
                     <ul class="list-group">
-                        <li class="list-group-item d-flex justify-content-between">
-                            <span> texto</span>
-                            <button type="button" class="btn btn-danger"><i class="fa-solid fa-trash"></i></button> 
+                        <li v-for="(task, index) in tareas " class="list-group-item d-flex justify-content-between">
+                            <span>
+                                <i v-if="task.completado" class="fa-solid fa-square-check text-success fa-lg"></i>
+                                <i v-else class="fa-solid fa-clock text-primary fa-lg"></i>
+                                <strong>  {{ task.descripcion }} </strong><br>
+                                <span> {{task.fecha }}</span>
+                                
+                            </span>
+                            <button v-on:click="eliminar(index)" type="button" class="btn btn-danger">
+                                <i class="fa-solid fa-trash"></i>
+                            </button> 
                         </li>
                     </ul>
                 </div>
 
             </div>
             <div class="col-md-2">
-                <h2> Tareas <span> 2</span></h2>
+                <h2> Tareas <span> {{ tareas.length }} </span></h2>
+
+    
+            </div>
+            <div class="row">
+                <pre>
+                    {{ tareas }}
+
+                </pre>
             </div>
         </div>
 
