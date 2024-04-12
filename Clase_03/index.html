@@ -20,7 +20,7 @@
     <main id="app" class="container mt-2">
         <div class="row mt-3">
             <div class="col-md-4">
-                <form v-on:submit.prevent="guardar" class="card p-3">
+                <form v-on:submit.prevent="agregar" class="card p-3">
                     <label for="tarea">Tarea</label>
                     <textarea v-model="tarea" cols="30" rows="4" class="form-control"></textarea>
                     <button class="btn btn-success mt-2" type="submit">Guardar</button>
@@ -29,7 +29,7 @@
             <div class="col-md-4">
                 <div class="card p-2">
                     <ul class="list-group">
-                        <li v-for="(task, index) in tareas " class="list-group-item d-flex justify-content-between">
+                        <li v-for="(task, index) in tareas" class="list-group-item d-flex justify-content-between">
                             <span>
                                 <i v-if="task.completado" class="fa-solid fa-square-check text-success fa-lg"></i>
                                 <i v-else class="fa-solid fa-clock text-primary fa-lg"></i>
@@ -37,9 +37,15 @@
                                 <span> {{task.fecha }}</span>
                                 
                             </span>
-                            <button v-on:click="eliminar(index)" type="button" class="btn btn-danger">
-                                <i class="fa-solid fa-trash"></i>
-                            </button> 
+                            <span>
+                                <button v-if="!task.completado" v-on:click="completar(task)" type="button" class="btn btn-success btn-sm">
+                                    <i class="fa-solid fa-square-check"></i>
+                                </button> 
+                                <button v-if="task.completado" v-on:click="eliminar(index)" type="button" class="btn btn-danger btn-sm">
+                                    <i class="fa-solid fa-trash"></i>
+                                </button> 
+                            </span>
+
                         </li>
                     </ul>
                 </div>
