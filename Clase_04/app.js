@@ -3,6 +3,8 @@ const app = Vue.createApp({
     // El modelo
     data(){
         return {
+            nombre: 'Juan',
+            logueado: true,
             titulo: 'Componentes',
             lista: [
                 {id:1 , name: 'Gatito 1', img: 'images/gatito1.jpg', age: 1},
@@ -12,11 +14,14 @@ const app = Vue.createApp({
         }
     },
     created(){
-        console.log('Created');
+        console.log('Creación de la instancias');
     },
     // Métodos
     methods: {
-        
+        cambio(){
+            console.log('Cambio ', this.nombre);
+            
+        }
     }
 })
 

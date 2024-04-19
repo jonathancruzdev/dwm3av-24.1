@@ -36,7 +36,22 @@
  
             </div>
         </main>
-        <aside>
+        <aside class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <form action="" class="card p-4 m-2">
+                        <label for="">Nombre</label>
+                        <input v-on:input="cambio" v-model="nombre" class="form-control" type="text">
+
+                        <label for="">Contraseña</label>
+                        <input class="form-control" type="text">
+
+                        <label for="">Matenerme Logueado {{  logueado }}</label>
+                        <input v-model="logueado" type="checkbox">
+                        <button class="btn btn-success mt-3"> Loging</button>
+                    </form>
+                </div>
+            </div>
 
         </aside>
         <footer class="bg-dark">
