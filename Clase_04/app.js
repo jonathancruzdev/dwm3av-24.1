@@ -1,3 +1,4 @@
+/* ---------------------------- Instancia de Vue ---------------------------- */
 const app = Vue.createApp({
     // El modelo
     data(){
@@ -18,6 +19,33 @@ const app = Vue.createApp({
     methods: {
         
     }
+})
+
+
+/* ------------------------------- Componetes ------------------------------- */
+app.component('titulo', {
+    data(){
+        return {
+            texto : ' Hoy soy un título'
+        }
+    },
+    template: '<h2 class="text-info"> {{ texto}} </h2>'
+});
+
+app.component('gatito', {
+    props: ['nombre', 'edad', 'foto'],  
+    template: 
+            ` <div class="col-md-3">
+                <div class="card"> 
+                    <img v-bind:src="foto" class="card-img-top" alt="gatito">
+                    <div class="card-body">
+                        <h4> {{ nombre }} </h4>
+                        <strong>Edad: </strong> <span> {{ edad }} </span>
+                        <hr>
+                        <button class="btn btn-success" type="button"> Ver</button>
+                    </div>
+                </div>
+            </div>`
 })
 
 app.mount('#app');
