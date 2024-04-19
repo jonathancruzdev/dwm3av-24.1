@@ -4,10 +4,10 @@ const app = Vue.createApp({
     data(){
         return {
             titulo: 'Componentes',
-            gatitos: [
-                {id:1 , name: 'Gatito 1', img: 'images/gatito1.jpg'},
-                {id:2 , name: 'Gatito 2', img: 'images/gatito2.jpg'},
-                {id:3 , name: 'Gatito 3', img: 'images/gatito3.jpg'},
+            lista: [
+                {id:1 , name: 'Gatito 1', img: 'images/gatito1.jpg', age: 1},
+                {id:2 , name: 'Gatito 2', img: 'images/gatito2.jpg', age: 2},
+                {id:3 , name: 'Gatito 3', img: 'images/gatito3.jpg', age: 1},
 
             ]
         }
@@ -33,7 +33,17 @@ app.component('titulo', {
 });
 
 app.component('gatito', {
-    props: ['nombre', 'edad', 'foto'],  
+    props: ['nombre', 'edad', 'foto'],
+    data(){
+        return {
+            count: 0
+        }
+    },
+    methods: {
+        darLike() {
+            this.count++
+        }
+    },
     template: 
             ` <div class="col-md-3">
                 <div class="card"> 
@@ -42,7 +52,7 @@ app.component('gatito', {
                         <h4> {{ nombre }} </h4>
                         <strong>Edad: </strong> <span> {{ edad }} </span>
                         <hr>
-                        <button class="btn btn-success" type="button"> Ver</button>
+                        <button v-on:click="darLike" class="btn btn" type="button">❤ {{count}}</button>
                     </div>
                 </div>
             </div>`

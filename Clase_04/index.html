@@ -22,22 +22,18 @@
             <titulo></titulo>
 
             <div class="row">
-                <img src="" alt="alternativo">
-                <gatito nombre="Manchita" edad="2" foto="images/gatito1.jpg"></gatito>
-                <gatito nombre="pequeño" foto="images/gatito2.jpg" edad="1"></gatito>
-                <gatito nombre="Luna" foto="images/gatito3.jpg"></gatito>
-
-
+                <gatito 
+                    v-for="(item, index) in lista"
+                    v-bind:nombre="item.name" 
+                    v-bind:edad="item.age" 
+                    v-bind:foto="item.img"
+                ></gatito>
                 
-                <!-- <div class="col-md-3">
-                    <div class="card">
-                        <img src="images/gatito1.jpg" class="card-img-top" alt="gatito">
-                        <div class="card-body">
-                            <h4>gatito 1</h4>
-                            <button class="btn btn-success" type="button"> Ver</button>
-                        </div>
-                    </div>
-                </div> -->
+                <img src="" alt="alternativo">
+
+
+                <gatito nombre="Manchita" edad="2" foto="images/gatito1.jpg"></gatito>
+ 
             </div>
         </main>
         <aside>
