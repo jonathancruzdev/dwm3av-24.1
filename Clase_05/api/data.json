@@ -1,0 +1,10 @@
+{
+    "messege": "GET Data",
+    "data": [
+        { "id": 1, "name": "Programación I"},
+        { "id": 2, "name": "Aplicaciones Webs Progresiva"},
+        { "id": 3, "name": "Aplicaciones para Dispositivos Móviles"},
+        { "id": 4, "name": "Programación II"},
+        { "id": 5, "name": "Lógica de Programación "}
+    ]
+}

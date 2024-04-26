@@ -17,38 +17,46 @@
         <header class=" bg-primary">
             <h1 class="text-white"> LocalSotarge & Fetch</h1>
         </header>
-        <main class="container">
+        <main id="app" class="container">
             <div class="row mt-3">
                 <div class="col-md-4">
-                    <form action="" class="card p-2">
+
+                    <form v-on:submit.prevent="inscribirse" action="" class="card p-2">
                         <label for="">Nombre</label>
-                        <input type="text" class="form-control">
+                        <input v-model="nombre" type="text" class="form-control">
 
                         <label for="">Apellido</label>
-                        <input type="text" class="form-control">
+                        <input v-model="apellido"  type="text" class="form-control">
 
                         <label for="">Email</label>
-                        <input type="email" class="form-control">
+                        <input v-model="email" type="email" class="form-control">
 
                         <label for="">Curso</label>
-                        <select class="form-control">
-                            <option value="1">Programación I</option>
+                        <select v-model="cursoId" class="form-control">
+                            <option 
+                                v-for="(curso, index) in cursos" 
+                                v-bind:value="curso.id"
+                                v-text="curso.name">
+                            </option>
                         </select>
                         <button type="submit" class="btn btn-success mt-2"> Inscribirse</button>
                     </form>
                 </div>
                 <div class="col-md-6">
                     <div class="list-group">
-                        <a href="#" class="list-group-item list-group-item-action" aria-current="true">
+                        <a 
+                            v-for="(inscripcion, index) in inscripciones" 
+                            
+                            href="#" class="list-group-item list-group-item-action" aria-current="true">
                             <div class="d-flex w-100 justify-content-between">
-                                <h5 class="mb-1">Juan Perez</h5>
-                                <small> 14:28hs </small>
+                                <h5 class="mb-1">{{ inscripcion.nombre}}</h5>
+                                <small> {{ inscripcion.hora}} </small>
                             </div>
-                            <p class="mb-1">Programación I</p>
-                            <small>And some small print.</small>
+                            <p class="mb-1">{{ obtenerCurso(inscripcion.cursoId)  }}</p>
+                            <small>{{ inscripcion.fecha}}</small>
                         </a>
 
-               
+                        
                     </div>
 
                 </div>
