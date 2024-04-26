@@ -13,6 +13,11 @@ const app = Vue.createApp( {
         this.getJSON();
         this.leerLocal();
     },
+    computed: {
+        total() {
+            return this.inscripciones.length;
+        }
+    },
     methods: {
         async getJSON(){
             try {
