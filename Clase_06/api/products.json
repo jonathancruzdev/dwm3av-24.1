@@ -1,0 +1,25 @@
+{
+    "lista": [
+        {
+            "id": 1,
+            "name": "DRAGONBORN K630",
+            "price": 15000,
+            "img": "images/teclado.png",
+            "category": "teclados"
+        },
+        {
+            "id": 3,
+            "name": "Gabinete ",
+            "price": 5000,
+            "img": "images/gabinete.png",
+            "category": "Compuación"
+        },
+        {
+            "id": 2,
+            "name": "Audio ",
+            "price": 5000,
+            "img": "images/audio.png",
+            "category": "Compuación"
+        }
+    ]
+}

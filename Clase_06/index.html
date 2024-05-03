@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Vue</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-png">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js" defer></script>
+    <script src="app.js" defer></script>
+
+</head>
+<body>
+    <header>
+        <h1><i class="fa-brands fa-shopify"></i> Tienda Vue</h1>
+    </header>
+    <main id="app">
+
+        <div class="card">
+            <h2> Productos</h2>
+            <input type="search" placeholder="Buscar..."> <button type="button">Buscar</button>
+
+            <select>
+                <option value="1">Teclados</option>
+            </select>
+            <div class="row">
+                <div class="card">
+                    <h4>DRAGONBORN K630</h4>
+                    <img src="images/teclado.png" alt="DRAGONBORN K630">
+                    <h3>$15.000</h3>
+                    <button type="button" class="mt-1"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button>
+                </div>
+                <div class="card">
+                    <h4>WHEELJACK GC606</h4>
+                    <img src="images/gabinete.png" alt="WHEELJACK GC606">
+                    <h3>$65.000</h3>
+                    <button type="button" class="mt-1"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button>
+                </div>
+                <div class="card">
+                    <h4>SCYLLA</h4>
+                    <img src="images/audio.png" alt="SCYLLA">
+                    <h3>$21.000</h3>
+                    <button type="button" class="mt-1"><i class="fa-solid fa-cart-plus"></i> Agregar al Carrito</button>
+                </div>
+             
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fa-solid fa-cart-shopping btn-detalle"></i> Carrito</h2>
+            
+            <p>Items del carrito</p>
+
+            <h4>Total: $0</h4>
+        </div>
+    </main>
+    <footer>
+        <p> DV | Aplicaciones para Dispositivos Móviles</p>
+    </footer>
+</body>
+</html>
