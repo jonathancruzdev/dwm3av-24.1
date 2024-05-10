@@ -32,8 +32,15 @@ const app = Vue.createApp({
                     count: 1
                 })
             }
+        },
+        guardarStorage(dataHijo){
+            const datos = JSON.parse( localStorage.getItem('guardados') );
+            const guardados = datos ? datos : [];
+            guardados.push( dataHijo);
 
+            console.log(guardados);
 
+            localStorage.setItem('guardados', JSON.stringify( guardados));
         },
         cambio(){
             console.log('Cambio ', this.nombre);

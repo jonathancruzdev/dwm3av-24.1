@@ -8,7 +8,11 @@ const Card = {
     methods: {
         darLike() {
             this.count++;
-            this.$emit('favorito', { id: this.id, name: this.nombre })
+            this.$emit('favorito', { id: this.id, name: this.nombre } )
+        },
+        save(){
+            console.log('Emitiendo un evento: guardar')
+            this.$emit('guardar', { id: this.id, name: this.nombre, foto: this.foto } )
         }
     },
     template: // html
@@ -21,6 +25,8 @@ const Card = {
                         <p> {{ descripcion}} </p>
                         <hr>
                         <button v-on:click="darLike" class="btn btn" type="button">❤ {{count}}</button>
+                        <button v-on:click="save" class="btn btn" type="button"> 💾 </button>
+
                     </div>
                 </div>
             </div>`

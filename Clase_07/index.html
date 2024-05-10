@@ -42,6 +42,7 @@
                 <card 
                     v-for="(item, index) in lista"
                     v-on:favorito="agregarFavorito"
+                    v-on:guardar="guardarStorage"
                     v-bind:id = "item.id"
                     v-bind:nombre="item.name" 
                     v-bind:edad="item.age" 
