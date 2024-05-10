@@ -1,0 +1,27 @@
+header {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    font-weight: 600;
+    text-decoration: underline;
+    color: slateblue;
+}
+
+main {
+    min-height: 70vh;
+}
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favoritos {
+    position: fixed;
+    top: 300px
+}
