@@ -1,0 +1,53 @@
+header {
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.active {
+    font-weight: 600;
+    text-decoration: underline;
+    color: slateblue;
+}
+
+main {
+    min-height: 80vh;
+}
+footer {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.favoritos {
+    position: fixed;
+    top: 300px
+}
+
+nav {
+    background-color: seagreen;
+    height: 7vh;
+    position: sticky;
+    top:0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 7vh;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.router-link-exact-active {
+    border-bottom: 2px solid white;
+    text-decoration: none;
+    color: whitesmoke;
+}
