@@ -9,8 +9,8 @@
 
 ## Comandos
 
-´´´
-    - npm create vite@latest
-    - npm run dev
-    - npm run build
-´´´
+
+- npm create vite@latest
+- npm run dev
+- npm run build
+
